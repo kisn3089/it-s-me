@@ -21,7 +21,7 @@ const Contact = () => {
 
     return (
         <section id='contact'>
-            <h5>Get In Touch</h5>
+            {/*<h5>Get In Touch</h5>*/}
             <h2>Contact Me</h2>
             {send && <h2>Success!</h2>}
 
@@ -30,24 +30,24 @@ const Contact = () => {
 
                     <article className='contact__option'>
                         <MdEmail className='contact__option-icon' />
-                        <h4>Email</h4>
+                        <h4>Naver Email</h4>
                         <h5>kisn3089@naver.com</h5>
                         <a href='https://mail.naver.com/write/popup?srvid=note&to=kisn3089@naver.com' target='_blank'>Send a message</a>
                     {/*  mailto:kisn3089@naver.com?bcc=kisn3089@naver.com  */}
                     </article>
 
-                    <article className='contact__option'>
-                        <RiMessageLine className='contact__option-icon' />
-                        <h4>Email</h4>
-                        <h5>kisn3089@naver.com</h5>
-                        <a href='mailto:kisn3089@naver.com?bcc=kisn3089@naver.com' target='_blank'>Send a message</a>
-                    </article>
+                    {/*<article className='contact__option'>*/}
+                    {/*    <RiMessageLine className='contact__option-icon' />*/}
+                    {/*    <h4>Email</h4>*/}
+                    {/*    <h5>kisn3089@naver.com</h5>*/}
+                    {/*    <a href='mailto:kisn3089@naver.com?bcc=kisn3089@naver.com' target='_blank'>Send a message</a>*/}
+                    {/*</article>*/}
 
                     <article className='contact__option'>
                         <BsWhatsapp className='contact__option-icon' />
-                        <h4>WhatsApp</h4>
+                        <h4>Phone</h4>
                         <h5>010-3363-3089</h5>
-                        <a href='https://api.whatsapp.com/send?phone+01033633089' target='_blank'>Send a message</a>
+                        {/*<a href='https://api.whatsapp.com/send?phone+01033633089' target='_blank'>Send a message</a>*/}
                     </article>
                 </div>
                     {/*    END OF CONTACT OPTIONS*/}

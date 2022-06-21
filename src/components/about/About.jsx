@@ -41,11 +41,11 @@ const About = () => {
                     </div>
 
                     <p>
-                        Lorem ipsum dadddqdddsasdadadadqdqweqdsadsadasdadasdadadasdasd
-                        qweqwedasdadassdaaddqwedasdadasddqweweqeqeqeqeqeqw
+                        qwe
+                        qwe
                     </p>
 
-                    <a href='#contact' className='btn btn-primary'>Let's Talk</a>
+                    <a href='#contact' className='btn btn-primary'>Contact</a>
                 </div>
             </div>
         </section>
