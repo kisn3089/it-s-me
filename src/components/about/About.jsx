@@ -24,25 +24,26 @@ const About = () => {
                         <article className='about__card'>
                             <FaAward className='about__icon' />
                             <h5>Experience</h5>
-                            <small>3+ Years Working</small>
+                            <small>1 ~ Years Studying</small>
                         </article>
 
                         <article className='about__card'>
                             <FiUsers className='about__icon' />
                             <h5>Clients</h5>
-                            <small>200+ Worldwide</small>
+                            <small>0</small>
                         </article>
 
                         <article className='about__card'>
                             <VscFolderLibrary className='about__icon' />
                             <h5>Project</h5>
-                            <small>80+ Completed</small>
+                            <small>5 + Completed</small>
                         </article>
                     </div>
 
                     <p>
-                        qwe
-                        qwe
+                        사용자에게 입체적인 웹서비스를 제공하기 위해 사용자 중심 인터페이스와 인터렉티브한 3D 웹뷰를 지향해,
+                        JavaScript 라이브러리인 Three.js를 공부하고 있고 메타버스와 블록체인에도 관심이 많아
+                        Unreal Engine 5와 Solidity 라이브러리를 공부하고 있습니다.
                     </p>
 
                     <a href='#contact' className='btn btn-primary'>Contact</a>
