@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kitty Cat
+* source:	https://sketchfab.com/3d-models/kitty-cat-47a6cb0f2b594e78acccc519ea1b6878
+* author:	roto (https://sketchfab.com/rotoslinger)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kitty Cat" (https://sketchfab.com/3d-models/kitty-cat-47a6cb0f2b594e78acccc519ea1b6878) by roto (https://sketchfab.com/rotoslinger) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

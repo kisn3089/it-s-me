@@ -40,7 +40,7 @@ header {
 
 /*====================ME================*/
 .me {
-    background: var(--color-primary);
+    /*background: var(--color-primary);*/
     width: 22rem;
     height: 30rem;
     position: absolute;
@@ -59,6 +59,12 @@ header {
     transform: rotate(90deg);
     font-weight: 300;
     font-size: 0.9rem;
+}
+
+.canvas {
+    width: 300px;
+    height: 300px;
+    z-index: 99;
 }
 
 /*============media queries (MEDIUM)==================*/
