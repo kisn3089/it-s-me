@@ -58,6 +58,8 @@ h5 {
 
 h1 {
     font-size: 2.5rem;
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #fff;
 }
 
 section {
@@ -73,6 +75,8 @@ section > h5 {
 section > h2 {
     color: var(--color-primary);
     margin-bottom: 3rem;
+    text-shadow: 0 0 10px var(--color-primary),
+    0 0 20px var(--color-primary);
 }
 
 .text-light {
