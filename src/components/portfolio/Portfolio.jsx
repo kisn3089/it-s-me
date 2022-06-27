@@ -78,7 +78,7 @@ const Portfolio = () => {
                     <h3>home + hospital 원스톱 비대면 의료 서비스 프로젝트</h3>
                     <div className='portfolio__item-cta'>
                         <a href='https://github.com/silbioa480/homespital' className='btn' target='_blank'>Github</a>
-                        <a href='file:///C:/Users/InSung/Desktop/%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%ED%8F%AC%ED%8F%B4/Front%20end/online-personal.pdf' className='btn btn-primary' target='_blank'>Live Demo</a>
+                        <a href='https://drive.google.com/file/d/1XDAMc5WBDE7TvYv4iAjfbyA03EHeAtuV/view?usp=sharing' className='btn btn-primary' target='_blank'>Live Demo</a>
                     </div>
                 </article>
 
@@ -89,7 +89,7 @@ const Portfolio = () => {
                     <h3>Online-Personal-Exhibition 온라인 개인 사진전</h3>
                     <div className='portfolio__item-cta'>
                         <a href='https://github.com/kisn3089/Online-Personal-Photo-Exhibition' className='btn' target='_blank'>Github</a>
-                        <a href='file:///C:/Users/InSung/Desktop/%EC%9D%B4%EB%A0%A5%EC%84%9C%20%EB%B0%8F%20%ED%8F%AC%ED%8F%B4/Front%20end/online-personal.pdf' className='btn btn-primary' target='_blank'>Live Demo</a>
+                        <a href='https://drive.google.com/file/d/19944Pjh-zbgcbg02VY2hw564JOBSRyxp/view?usp=sharing' className='btn btn-primary' target='_blank'>Live Demo</a>
                     </div>
                 </article>
             </div>
