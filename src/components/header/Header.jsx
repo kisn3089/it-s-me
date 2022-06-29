@@ -6,7 +6,6 @@ import { Canvas } from '@react-three/fiber'
 import me1 from '../../assets/me1.jpg';
 import Box from "./Box";
 import { OrbitControls, Stars } from '@react-three/drei'
-import Plane from "./Plane";
 // import { useBox } from 'use-cannon'
 
 
@@ -23,12 +22,23 @@ const Header = () => {
 
                 <div className='me'>
                     <Canvas className='canvas'>
-                        <OrbitControls />
+                        <OrbitControls
+                            enableZoom={true}
+                            enablePan={true}
+                            enableRotate={true}
+                            zoomSpeed={1}
+                            panSpeed={1}
+                            rotateSpeed={1}
+
+                        />
                         <ambientLight intensity={0.5} />
-                        <Stars />
+                        <Stars depth={100}
+                               fade={true}
+                               factor={7}
+                               saturation={0}
+                        />
                         <Box position={[0, 0, 0]} />
-                        <spotLight position={[10, 15, 10]} angle={0.3} />
-                        {/*<Plane />*/}
+                        <pointLight color='#fff' position={[5, 5, 5]} intensity={5} />
                     </Canvas>
                     {/*<img src={me1} alt='me' style={{borderRadius: '10%'}} />*/}
                 </div>
