@@ -10,6 +10,13 @@ header {
     position: relative;
 }
 
+.canvas {
+    z-index: -1;
+    background-color: #1a1a1a;
+    /*background-color: var(--color-bg);*/
+    /*background-image: url(../src/assets/bg-texture.png);*/
+}
+
 /*!*================CTA ===================*!*/
 
 .cta {
@@ -41,14 +48,13 @@ header {
 /*====================ME================*/
 .me {
     /*background: var(--color-primary);*/
-    width: 22rem;
-    height: 30rem;
+    width: 200px;
+    height: 200px;
     position: absolute;
-    left: calc(50% - 11rem);
-    margin-top: 4rem;
-    border-radius: 12rem 12rem 0 0;
+    left: calc(50% - 100px);
+    margin-top: 100px;
+    border-radius: 50%;
     overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
 }
 
 /*===============Scroll Down================*/
