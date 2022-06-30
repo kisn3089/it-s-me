@@ -1,8 +1,8 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './header.css';
 import Cta from "./CTA";
 import HeaderSocials from "./HeaderSocials";
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import Box from "./Box";
 import { OrbitControls, Stars } from '@react-three/drei'
 

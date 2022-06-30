@@ -8,7 +8,7 @@ import EarthCloudsMap from '../../assets/8k_earth_clouds.jpg'
 import {TextureLoader} from "three";
 import * as THREE from 'three'
 
-const Box = () => {
+const Box = (props) => {
     const earthRef = useRef();
     const cloudsRef = useRef();
     const [colorMap, normalMap, specularMap, cloudMap] = useLoader(TextureLoader,
@@ -20,6 +20,14 @@ const Box = () => {
         earthRef.current.rotation.y = elapsedTime / 6
         cloudsRef.current.rotation.y = elapsedTime / 6
     })
+
+    // useFrame((state) => {
+    //     const step = 0.1;
+    //     state.camera.position = THREE.MathUtils.lerp(
+    //         state.camera.position,
+    //         zoom ?
+    //     )
+    // })
 
     return (
         <>
