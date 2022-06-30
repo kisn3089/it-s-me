@@ -85,4 +85,10 @@ header {
     .scroll__down {
         display: none;
     }
+    .me {
+        margin-top: 50px;
+        width: 250px;
+        height: 250px;
+        left: calc(50% - 125px);
+    }
 }
