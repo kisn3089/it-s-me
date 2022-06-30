@@ -10,13 +10,6 @@ header {
     position: relative;
 }
 
-.canvas {
-    z-index: -1;
-    background-color: #1a1a1a;
-    /*background-color: var(--color-bg);*/
-    /*background-image: url(../src/assets/bg-texture.png);*/
-}
-
 /*!*================CTA ===================*!*/
 
 .cta {
@@ -67,10 +60,13 @@ header {
     font-size: 0.9rem;
 }
 
+/*-----------Canvas-------------*/
 .canvas {
     width: 300px;
     height: 300px;
-    z-index: 99;
+    z-index: 1;
+    background-color: #000;
+    border-radius: 50%;
 }
 
 /*============media queries (MEDIUM)==================*/

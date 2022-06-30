@@ -1,16 +1,13 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import './header.css';
 import Cta from "./CTA";
 import HeaderSocials from "./HeaderSocials";
-import { Canvas } from '@react-three/fiber'
-import me1 from '../../assets/me1.jpg';
+import { Canvas, useFrame } from '@react-three/fiber'
 import Box from "./Box";
 import { OrbitControls, Stars } from '@react-three/drei'
-// import { useBox } from 'use-cannon'
-
-
 
 const Header = () => {
+
     return (
         <header>
             <div className="container header__container">
@@ -26,10 +23,10 @@ const Header = () => {
                             enableZoom={true}
                             enablePan={true}
                             enableRotate={true}
+                            enableDamping={true}
                             zoomSpeed={1}
                             panSpeed={1}
                             rotateSpeed={1}
-
                         />
                         <ambientLight intensity={0.5} />
                         <Stars depth={100}
@@ -38,9 +35,8 @@ const Header = () => {
                                saturation={0}
                         />
                         <Box position={[0, 0, 0]} />
-                        <pointLight color='#fff' position={[5, 5, 5]} intensity={5} />
+                        <pointLight position={[5, 5, 5]} intensity={5} />
                     </Canvas>
-                    {/*<img src={me1} alt='me' style={{borderRadius: '10%'}} />*/}
                 </div>
 
                 <a href='#contact' className='scroll__down'>Scroll Down</a>

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {useFrame, useLoader} from '@react-three/fiber'
 
 import EarthDayMap from '../../assets/8k_earth_daymap.jpeg'
@@ -27,7 +27,9 @@ const Box = () => {
                 <sphereGeometry args={[1.7005, 32, 32]} />
                 <meshPhongMaterial map={cloudMap} opacity={0.4} depthWrite={true} transparent={true} side={THREE.DoubleSide} />
             </mesh>
-            <mesh position={[0, 0, 0]} ref={earthRef}>
+            <mesh position={[0, 0, 0]}
+                  ref={earthRef}
+            >
                 <sphereGeometry args={[1.7, 32, 32]} attach='geometry' />
                 <meshPhongMaterial specularMap={specularMap} />
                 <meshStandardMaterial
