@@ -43,7 +43,7 @@ const Services = () => {
                     <ul className='service__list'>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>WebGL</p>
+                            <p>THREE.js</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
