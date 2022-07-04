@@ -69,7 +69,8 @@ const Remember = () => {
             duration: 1,
             y: 50,
             opacity: 0,
-            zIndex: -1
+            zIndex: -1,
+            display: 'none'
         })
     }, [])
 

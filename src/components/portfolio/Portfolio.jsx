@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './portfolio.css';
 import IMG1 from '../../assets/portfolio2.jpg';
 import food from '../../assets/31.png';
@@ -7,6 +7,10 @@ import number from '../../assets/number.png';
 import homes from '../../assets/homs.png';
 import daily from '../../assets/daily.png';
 import kairos from '../../assets/kairos.png';
+import gsap from 'gsap'
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
 const data = [
@@ -43,22 +47,84 @@ const data = [
         image: daily,
         title: 'Daily Cooder 커뮤니티 기반 의류 추천 서비스 프로젝트',
         github: 'https://github.com/silbioa480/Daily-Coorder',
-        demo: 'https://github.com/kisn3089'
+        demo: 'https://daily-coorder.vercel.app/'
     },
-
-
 ]
 
 const Portfolio = () => {
+    const sub = useRef(null);
+    const main = useRef(null);
+    const card = useRef([]);
+    card.current = [];
+
+    const refs = (el) => {
+        if(el && !card.current.includes(el)) {
+         card.current.push(el);
+        }
+        console.log(card.current[3]);
+    }
+
+    useEffect(() => {
+        gsap.from([sub.current, main.current], {
+            scrollTrigger: {
+                trigger: sub.current,
+                start: "top bottom",
+                end: "+=40%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .3
+            }
+        })
+        gsap.from(card.current, {
+            scrollTrigger: {
+                trigger: card.current,
+                start: "top bottom",
+                end: "+=50%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .9
+            }
+        })
+        gsap.from([card.current[3],card.current[4]], {
+            scrollTrigger: {
+                trigger: card.current[3],
+                start: "0% bottom",
+                end: "+=50%",
+                markers: true,
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .9
+            }
+        })
+    })
+
     return (
         <section id='portfolio'>
-            <h5>My Recent Project</h5>
-            <h2>Portfolio</h2>
+            <h5 ref={sub}>My Recent Project</h5>
+            <h2 ref={main}>Portfolio</h2>
 
             <div className='container portfolio__container'>
                 {data.map(({id, image, title, github, demo}) => {
                     return (
-                        <article key={id} className='portfolio__items'>
+                        <article key={id} className='portfolio__items' ref={refs}>
                             <div className='portfolio__item-image'>
                                 <img src={image} alt={title} />
                             </div>
