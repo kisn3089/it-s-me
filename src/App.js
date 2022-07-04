@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      {/*<Remember />*/}
+      <Remember />
       <Header timeline={timeline}/>
       {/*<Nav />*/}
       <About />
