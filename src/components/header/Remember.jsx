@@ -59,6 +59,7 @@ const Remember = ({timeline}) => {
             duration: 1,
             y: 50,
             opacity: 0,
+            zIndex: -1,
             stagger: {
                 amount: .3
             }
@@ -67,7 +68,8 @@ const Remember = ({timeline}) => {
             delay: 3,
             duration: 1,
             y: 50,
-            opacity: 0
+            opacity: 0,
+            zIndex: -1
         })
     }, [])
 

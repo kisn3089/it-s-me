@@ -5,7 +5,6 @@ import HeaderSocials from "./HeaderSocials";
 import { Canvas } from '@react-three/fiber'
 import Box from "./Box";
 import { OrbitControls, Stars } from '@react-three/drei'
-import Transition from "./Transition";
 import gsap from 'gsap'
 
 const Header = ({timeline}) => {
@@ -13,6 +12,7 @@ const Header = ({timeline}) => {
     const h1 = useRef(null);
     const text = useRef(null);
     const canvas = useRef(null);
+    const scroll = useRef(null);
     useEffect(() => {
         timeline.from([h5.current,h1.current,text.current], .7, {
             delay: 3,
@@ -27,7 +27,14 @@ const Header = ({timeline}) => {
         gsap.from(canvas.current, {
             duration: 1,
             delay: 4,
-            x: -400
+            x: -1000,
+            ease: 'Expo.inOut'
+        })
+        gsap.from(scroll.current, {
+            duration: .7,
+            opacity: 0,
+            delay: 5,
+            x: 50
         })
     }, []);
 
@@ -65,7 +72,7 @@ const Header = ({timeline}) => {
                         </Canvas>
                     </div>
 
-                    <a href='#contact' className='scroll__down'>Scroll Down</a>
+                    <a href='#contact' ref={scroll} className='scroll__down'>Scroll Down</a>
                 </div>
             </header>
         </>

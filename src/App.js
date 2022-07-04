@@ -10,7 +10,6 @@ import About from "./components/about/About";
 import Services from "./components/serveices/Services";
 import Footer from "./components/footer/Footer";
 import gsap from 'gsap'
-import Transition from "./components/header/Transition";
 import Remember from "./components/header/Remember";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
   return (
     <>
       <Remember timeline={timeline} />
-      {/*<Transition />*/}
       <Header timeline={timeline}/>
       <Nav timeline={timeline} />
       <About />
