@@ -10,37 +10,97 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = ({timeline}) => {
-    const about1 = useRef(null);
+    const section = useRef(null);
     const get = useRef(null);
     const about = useRef(null);
+    const img = useRef(null);
+    const card1 = useRef(null);
+    const card2 = useRef(null);
+    const card3 = useRef(null);
+    const text = useRef(null);
+    const btn = useRef(null);
 
     useEffect(() => {
         gsap.from([get.current, about.current], {
             scrollTrigger: {
                 trigger: get.current,
-                // toggleActions: "restart none restart none",
                 start: "top bottom",
                 end: "+=30%",
-                markers: true,
                 scrub: true
             },
             opacity: 0,
             y: 50,
             duration: .5,
             delay: .3,
+            ease: "Expo.inOut",
             stagger: {
                 amount: .3
             }
         })
+        gsap.from(img.current, {
+            scrollTrigger: {
+                trigger: img.current,
+                start: "-=220",
+                end: "+=270",
+                scrub: true
+            },
+            opacity: 0,
+            x: -100,
+            y: -300,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut"
+        })
+        gsap.from([card1.current, card2.current, card3.current], {
+            scrollTrigger: {
+                trigger: card1.current,
+                start: "top bottom",
+                end: "+=30%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .3
+            }
+        })
+        gsap.from(text.current, {
+            scrollTrigger: {
+                trigger: text.current,
+                start: "top bottom",
+                end: "+=30%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut"
+        })
+        gsap.from(btn.current, {
+            scrollTrigger: {
+                trigger: btn.current,
+                start: "top bottom",
+                end: "+=10%",
+                scrub: true,
+            },
+            opacity: 0,
+            x: 70,
+            duration: .2,
+            ease: "linear"
+        })
     }, [])
 
     return (
-        <section id='about' ref={about1}>
+        <section id='about' ref={section}>
             <h5 ref={get}>Get To Know</h5>
             <h2 ref={about}>About Me</h2>
 
             <div className='container about__container'>
-                <div className='about__me'>
+                <div className='about__me' ref={img}>
                     <div className='about__me-image'>
                         <img src={me2} alt='About Image' />
                     </div>
@@ -48,33 +108,33 @@ const About = ({timeline}) => {
 
 
                 <div className='about__content'>
-                    <div className='about__cards'>
+                    <div className='about__cards' ref={card1}>
                         <article className='about__card'>
                             <FaAward className='about__icon' />
                             <h5>Experience</h5>
                             <small>1 ~ Years Studying</small>
                         </article>
 
-                        <article className='about__card'>
+                        <article className='about__card' ref={card2}>
                             <FiUsers className='about__icon' />
                             <h5>Clients</h5>
                             <small>0</small>
                         </article>
 
-                        <article className='about__card'>
+                        <article className='about__card' ref={card3}>
                             <VscFolderLibrary className='about__icon' />
                             <h5>Project</h5>
                             <small>5 + Completed</small>
                         </article>
                     </div>
 
-                    <p>
+                    <p ref={text}>
                         사용자에게 입체적인 웹서비스를 제공하기 위해 사용자 중심 인터페이스와 인터렉티브한 3D 웹뷰를 지향해,
                         JavaScript 라이브러리인 Three.js를 공부하고 있고 메타버스와 블록체인에도 관심이 많아
                         Unreal Engine 5와 Solidity 라이브러리를 공부하고 있습니다.
                     </p>
 
-                    <a href='#contact' className='btn btn-primary'>Contact</a>
+                    <a href='#contact' className='btn btn-primary' ref={btn}>Contact</a>
                 </div>
             </div>
         </section>
