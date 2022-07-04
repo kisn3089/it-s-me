@@ -19,7 +19,7 @@ function App() {
     <>
       <Remember />
       <Header timeline={timeline}/>
-      {/*<Nav />*/}
+      <Nav />
       <About />
       <Experience />
       <Services />
