@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import './Remember.css'
 import gsap from 'gsap'
 
-const Remember = ({timeline}) => {
+const Remember = () => {
     const back = useRef(null);
     const r = useRef(null);
     const re = useRef(null);

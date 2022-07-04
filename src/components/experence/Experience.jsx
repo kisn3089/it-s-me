@@ -1,15 +1,70 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './experience.css';
 import {BsFillPatchCheckFill} from 'react-icons/bs';
+import gsap from 'gsap'
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Experience = () => {
+    const sub = useRef(null);
+    const main = useRef(null);
+    const card1 = useRef(null);
+    const card2 = useRef(null);
+
+    useEffect(() => {
+        gsap.from([sub.current, main.current], {
+            scrollTrigger: {
+                trigger: sub.current,
+                start: "top bottom",
+                end: "+=40%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .3
+            }
+        })
+        gsap.from(card1.current, {
+            scrollTrigger: {
+                trigger: card1.current,
+                start: "top bottom",
+                end: "+=50%",
+                scrub: true
+            },
+            opacity: 0,
+            x: -100,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut"
+        })
+        gsap.from(card2.current, {
+            scrollTrigger: {
+                trigger: card1.current,
+                start: "top bottom",
+                end: "+=50%",
+                scrub: true
+            },
+            opacity: 0,
+            x: 100,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut"
+        })
+    }, [])
+
+
     return (
         <section id='experience'>
-            <h5>What Skills I Have</h5>
-            <h2>My Experience</h2>
+            <h5 ref={sub}>What Skills I Have</h5>
+            <h2 ref={main}>My Experience</h2>
 
             <div className='container experience__container'>
-                <div className='experience__frontend'>
+                <div className='experience__frontend' ref={card1}>
                     <h3>Frontend Development</h3>
                     <div className='experience__content'>
 
@@ -63,7 +118,7 @@ const Experience = () => {
                     </div>
                 </div>
                 {/*END OF FRONTEND*/}
-                <div className='experience__backend'>
+                <div className='experience__backend' ref={card2}>
                     <h3>Backend Development</h3>
                     <div className='experience__content'>
 

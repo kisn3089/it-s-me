@@ -1,13 +1,35 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 import './contact.css';
 import {MdEmail} from 'react-icons/md';
-import {RiMessageLine} from 'react-icons/ri';
 import {BsWhatsapp} from 'react-icons/bs';
 import emailjs from 'emailjs-com';
+import gsap from 'gsap'
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
+    const main = useRef(null);
+
+
     const [send, setSend] = useState(false);
     const form = useRef();
+
+    useEffect(() => {
+        gsap.from(main.current, {
+            scrollTrigger: {
+                trigger: main.current,
+                start: "top bottom",
+                end: "+=40%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut"
+        })
+    }, [])
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -22,7 +44,7 @@ const Contact = () => {
     return (
         <section id='contact'>
             {/*<h5>Get In Touch</h5>*/}
-            <h2>Contact Me</h2>
+            <h2 ref={main}>Contact Me</h2>
             {send && <h2>Success!</h2>}
 
             <div className='container contact__container'>

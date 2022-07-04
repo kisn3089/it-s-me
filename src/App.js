@@ -17,10 +17,10 @@ function App() {
 
   return (
     <>
-      <Remember timeline={timeline} />
+      {/*<Remember />*/}
       <Header timeline={timeline}/>
-      {/*<Nav timeline={timeline} />*/}
-      <About timeline={timeline} />
+      {/*<Nav />*/}
+      <About />
       <Experience />
       <Services />
       <Portfolio />

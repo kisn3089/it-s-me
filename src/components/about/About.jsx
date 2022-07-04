@@ -9,10 +9,9 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const About = ({timeline}) => {
-    const section = useRef(null);
-    const get = useRef(null);
-    const about = useRef(null);
+const About = () => {
+    const sub = useRef(null);
+    const main = useRef(null);
     const img = useRef(null);
     const card1 = useRef(null);
     const card2 = useRef(null);
@@ -21,11 +20,11 @@ const About = ({timeline}) => {
     const btn = useRef(null);
 
     useEffect(() => {
-        gsap.from([get.current, about.current], {
+        gsap.from([sub.current, main.current], {
             scrollTrigger: {
-                trigger: get.current,
+                trigger: sub.current,
                 start: "top bottom",
-                end: "+=30%",
+                end: "+=40%",
                 scrub: true
             },
             opacity: 0,
@@ -55,7 +54,7 @@ const About = ({timeline}) => {
             scrollTrigger: {
                 trigger: card1.current,
                 start: "top bottom",
-                end: "+=30%",
+                end: "+=40%",
                 scrub: true
             },
             opacity: 0,
@@ -71,7 +70,7 @@ const About = ({timeline}) => {
             scrollTrigger: {
                 trigger: text.current,
                 start: "top bottom",
-                end: "+=30%",
+                end: "+=40%",
                 scrub: true
             },
             opacity: 0,
@@ -95,9 +94,9 @@ const About = ({timeline}) => {
     }, [])
 
     return (
-        <section id='about' ref={section}>
-            <h5 ref={get}>Get To Know</h5>
-            <h2 ref={about}>About Me</h2>
+        <section id='about'>
+            <h5 ref={sub}>Get To Know</h5>
+            <h2 ref={main}>About Me</h2>
 
             <div className='container about__container'>
                 <div className='about__me' ref={img}>

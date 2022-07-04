@@ -1,15 +1,62 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './services.css';
 import {BiCheck} from 'react-icons/bi';
+import gsap from 'gsap'
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
+    const sub = useRef(null);
+    const main = useRef(null);
+    const section = useRef(null);
+    const card1 = useRef(null);
+    const card2 = useRef(null);
+    const card3 = useRef(null);
+
+    useEffect(() => {
+        gsap.from([sub.current, main.current], {
+            scrollTrigger: {
+                trigger: sub.current,
+                start: "top bottom",
+                end: "+=40%",
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .3
+            }
+        })
+        gsap.from([card1.current, card2.current, card3.current], {
+            scrollTrigger: {
+                trigger: section.current,
+                start: "top bottom",
+                end: "+=100%",
+                scrub: true
+            },
+            opacity: 0,
+            x: -50,
+            skewX: 5,
+            duration: .5,
+            delay: .3,
+            ease: "Expo.inOut",
+            stagger: {
+                amount: .6
+            }
+        })
+    }, [])
+
     return (
-        <section id='services'>
-            <h5>What I Offer</h5>
-            <h2>Services</h2>
+        <section id='services' ref={section}>
+            <h5 ref={sub}>What I Offer</h5>
+            <h2 ref={main}>Services</h2>
 
             <div className='container services__container'>
-                <article className='service'>
+                <article className='service' ref={card1}>
                     <div className='service__head'>
                         <h3>UI/UX Design</h3>
                     </div>
@@ -34,7 +81,7 @@ const Services = () => {
                     </ul>
                 </article>
             {/*    END OF UI/UX*/}
-                <article className='service'>
+                <article className='service' ref={card2}>
                     <div className='service__head'>
                         <h3>Web Development,</h3>
                             <h3>Business Tools</h3>
@@ -60,7 +107,7 @@ const Services = () => {
                     </ul>
                 </article>
                 {/*END OF Web Development*/}
-                <article className='service'>
+                <article className='service' ref={card3}>
                     <div className='service__head'>
                         <h3>Content Creation</h3>
                     </div>

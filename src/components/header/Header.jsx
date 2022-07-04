@@ -8,13 +8,13 @@ import { OrbitControls, Stars } from '@react-three/drei'
 import gsap from 'gsap'
 
 const Header = ({timeline}) => {
-    const h5 = useRef(null);
-    const h1 = useRef(null);
+    const sub = useRef(null);
+    const main = useRef(null);
     const text = useRef(null);
     const canvas = useRef(null);
     const scroll = useRef(null);
     useEffect(() => {
-        timeline.from([h5.current,h1.current,text.current], .7, {
+        timeline.from([sub.current,main.current,text.current], .7, {
             delay: 3,
             ease: 'Expo.inOut',
             opacity: 0,
@@ -43,8 +43,8 @@ const Header = ({timeline}) => {
             <header>
             {/*<Transition timeline={header}/>*/}
                 <div className="container header__container">
-                    <h5 ref={h5}>Hello I'm</h5>
-                    <h1 ref={h1}>his</h1>
+                    <h5 ref={sub}>Hello I'm</h5>
+                    <h1 ref={main}>his</h1>
                     <h5 className='text-light' ref={text}>Frontend Developer</h5>
                     <Cta timeline={timeline} />
                     <HeaderSocials timeline={timeline} />
