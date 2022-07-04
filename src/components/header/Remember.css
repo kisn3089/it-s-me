@@ -8,6 +8,7 @@
     height: 100vh;
     width: 100%;
     z-index: 100;
+    overflow: hidden;
 }
 
 .background span {
@@ -20,13 +21,13 @@
 /*============media queries (MEDIUM)==================*/
 @media screen and (max-width: 1024px) {
     .background span {
-        font-size: 70px;
+        font-size: 50px;
     }
 }
 
 /*============media queries (SMALL)==================*/
 @media screen and (max-width: 600px) {
     .background span {
-        font-size: 50px;
+        font-size: 30px;
     }
 }

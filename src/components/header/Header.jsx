@@ -27,8 +27,7 @@ const Header = ({timeline}) => {
         gsap.from(canvas.current, {
             duration: 1,
             delay: 4,
-            x: -1000,
-            ease: 'Expo.inOut'
+            x: -1000
         })
         gsap.from(scroll.current, {
             duration: .7,

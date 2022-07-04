@@ -1,15 +1,43 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './about.css';
 import me2 from '../../assets/me2.jpg';
 import {FaAward} from 'react-icons/fa';
 import {FiUsers} from 'react-icons/fi';
 import {VscFolderLibrary} from 'react-icons/vsc';
+import gsap from 'gsap'
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 
-const About = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const About = ({timeline}) => {
+    const about1 = useRef(null);
+    const get = useRef(null);
+    const about = useRef(null);
+
+    useEffect(() => {
+        gsap.from([get.current, about.current], {
+            scrollTrigger: {
+                trigger: get.current,
+                // toggleActions: "restart none restart none",
+                start: "top bottom",
+                end: "+=30%",
+                markers: true,
+                scrub: true
+            },
+            opacity: 0,
+            y: 50,
+            duration: .5,
+            delay: .3,
+            stagger: {
+                amount: .3
+            }
+        })
+    }, [])
+
     return (
-        <section id='about'>
-            <h5>Get To Know</h5>
-            <h2>About Me</h2>
+        <section id='about' ref={about1}>
+            <h5 ref={get}>Get To Know</h5>
+            <h2 ref={about}>About Me</h2>
 
             <div className='container about__container'>
                 <div className='about__me'>

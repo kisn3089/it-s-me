@@ -19,8 +19,8 @@ function App() {
     <>
       <Remember timeline={timeline} />
       <Header timeline={timeline}/>
-      <Nav timeline={timeline} />
-      <About />
+      {/*<Nav timeline={timeline} />*/}
+      <About timeline={timeline} />
       <Experience />
       <Services />
       <Portfolio />
