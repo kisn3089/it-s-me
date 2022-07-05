@@ -26,7 +26,7 @@ const Nav = () => {
         1100 < window.scrollY && window.scrollY < 1700 ? setExperience('active') : setExperience('#')
         1700 < window.scrollY && window.scrollY < 2300 ? setService('active') : setService('#')
         window.scrollY >= 2300 ? setPortfolio('active') : setPortfolio('#')
-        if(4300 < window.scrollY && window.scrollY <= 4400) {
+        if(4350 < window.scrollY && window.scrollY <= 4750) {
             setScrollTop('bot')
         }   else if(5900 < window.scrollY && window.scrollY <= 6000) {
             setScrollTop('bot')
