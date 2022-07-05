@@ -11,21 +11,30 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
+    const [a, setA] = useState('');
     const [scrollTop, setScrollTop] = useState('nav');
     const [home, setHome] = useState('#');
     const [about, setAbout] = useState('#');
     const [experience, setExperience] = useState('#');
     const [service, setService] = useState('#');
     const [portfolio, setPortfolio] = useState('#');
-    const nav = useRef(null);
 
     const downNav = () => {
-        window.scrollY >= 80 ? setScrollTop('ac') : setScrollTop('nav')
-        window.scrollY <= 200 ? setHome('active') : setHome('#')
-        200 < window.scrollY && window.scrollY < 1300 ? setAbout('active') : setAbout('#')
-        1300 < window.scrollY && window.scrollY < 2200 ? setExperience('active') : setExperience('#')
-        2200 < window.scrollY && window.scrollY < 3200 ? setService('active') : setService('#')
-        window.scrollY >= 3200 ? setPortfolio('active') : setPortfolio('#')
+        window.scrollY < 60 ? setScrollTop('nav') : setScrollTop('ac')
+        window.scrollY <= 400 ? setHome('active') : setHome('#')
+        400 < window.scrollY && window.scrollY < 1100 ? setAbout('active') : setAbout('#')
+        1100 < window.scrollY && window.scrollY < 1700 ? setExperience('active') : setExperience('#')
+        1700 < window.scrollY && window.scrollY < 2300 ? setService('active') : setService('#')
+        window.scrollY >= 2300 ? setPortfolio('active') : setPortfolio('#')
+        if(4300 < window.scrollY && window.scrollY <= 4400) {
+            setScrollTop('bot')
+        }   else if(5900 < window.scrollY && window.scrollY <= 6000) {
+            setScrollTop('bot')
+        }   else if(7800 < window.scrollY && window.scrollY <= 7900) {
+            setScrollTop('bot')
+        }   else {
+            return false;
+        }
     }
 
     useEffect(() => {
@@ -43,6 +52,13 @@ const Nav = () => {
             delay: 0,
             ease: "sine.inOut"
         })
+        gsap.to(".bot", {
+            yPercent: -180,
+            duration: .3,
+            opacity: 1,
+            delay: 0,
+            ease: "sine.inOut"
+        })
         window.addEventListener('scroll', downNav);
         return () => {
             window.removeEventListener("scroll", downNav);
@@ -50,7 +66,7 @@ const Nav = () => {
     }, [window.scrollY])
 
     return (
-        <nav ref={nav} className={scrollTop}>
+        <nav className={scrollTop}>
             <a href='#' className={home}><AiOutlineHome /></a>
             <a href='#about' className={about}><AiOutlineUser /></a>
             <a href='#experience' className={experience}><BiBook /></a>
