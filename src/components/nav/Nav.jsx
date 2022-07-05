@@ -11,12 +11,21 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
-    const [activeNav, setActiveNav] = useState('#');
     const [scrollTop, setScrollTop] = useState('nav');
+    const [home, setHome] = useState('#');
+    const [about, setAbout] = useState('#');
+    const [experience, setExperience] = useState('#');
+    const [service, setService] = useState('#');
+    const [portfolio, setPortfolio] = useState('#');
     const nav = useRef(null);
 
     const downNav = () => {
         window.scrollY >= 80 ? setScrollTop('ac') : setScrollTop('nav')
+        window.scrollY <= 200 ? setHome('active') : setHome('#')
+        200 < window.scrollY && window.scrollY < 1300 ? setAbout('active') : setAbout('#')
+        1300 < window.scrollY && window.scrollY < 2200 ? setExperience('active') : setExperience('#')
+        2200 < window.scrollY && window.scrollY < 3200 ? setService('active') : setService('#')
+        window.scrollY >= 3200 ? setPortfolio('active') : setPortfolio('#')
     }
 
     useEffect(() => {
@@ -42,11 +51,11 @@ const Nav = () => {
 
     return (
         <nav ref={nav} className={scrollTop}>
-            <a href='#' onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><AiOutlineHome /></a>
-            <a href='#about' onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><AiOutlineUser /></a>
-            <a href='#experience' onClick={() => setActiveNav('#experience')} className={activeNav === '#experience' ? 'active' : ''}><BiBook /></a>
-            <a href='#services' onClick={() => setActiveNav('#services')} className={activeNav === '#services' ? 'active' : ''}><RiServiceLine /></a>
-            <a href='#contact' onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><BiMessageSquareDetail /></a>
+            <a href='#' className={home}><AiOutlineHome /></a>
+            <a href='#about' className={about}><AiOutlineUser /></a>
+            <a href='#experience' className={experience}><BiBook /></a>
+            <a href='#services' className={service}><RiServiceLine /></a>
+            <a href='#contact' className={portfolio}><BiMessageSquareDetail /></a>
         </nav>
     );
 }
