@@ -49,6 +49,20 @@ const data = [
         github: 'https://github.com/silbioa480/Daily-Coorder',
         demo: 'https://daily-coorder.vercel.app/'
     },
+    {
+        id: 6,
+        image: homes,
+        title: 'home + hospital 원스톱 비대면 의료 서비스 프로젝트',
+        github: 'https://github.com/silbioa480/homespital',
+        demo: 'https://drive.google.com/file/d/1XDAMc5WBDE7TvYv4iAjfbyA03EHeAtuV/view?usp=sharing'
+    },
+    {
+        id: 7,
+        image: kairos,
+        title: 'Online-Personal-Exhibition 온라인 개인 사진전',
+        github: 'https://github.com/kisn3089/Online-Personal-Photo-Exhibition',
+        demo: 'https://drive.google.com/file/d/19944Pjh-zbgcbg02VY2hw564JOBSRyxp/view?usp=sharing'
+    },
 ]
 
 const Portfolio = () => {
@@ -61,7 +75,6 @@ const Portfolio = () => {
         if(el && !card.current.includes(el)) {
          card.current.push(el);
         }
-        console.log(card.current[3]);
     }
 
     useEffect(() => {
@@ -85,24 +98,7 @@ const Portfolio = () => {
             scrollTrigger: {
                 trigger: card.current,
                 start: "top bottom",
-                end: "+=50%",
-                scrub: true
-            },
-            opacity: 0,
-            y: 50,
-            duration: .5,
-            delay: .3,
-            ease: "Expo.inOut",
-            stagger: {
-                amount: .9
-            }
-        })
-        gsap.from([card.current[3],card.current[4]], {
-            scrollTrigger: {
-                trigger: card.current[3],
-                start: "0% bottom",
-                end: "+=50%",
-                markers: true,
+                end: "+=150%",
                 scrub: true
             },
             opacity: 0,
@@ -135,29 +131,7 @@ const Portfolio = () => {
                             </div>
                         </article>
                     )
-
                 })}
-                <article className='portfolio__items'>
-                    <div className='portfolio__item-image'>
-                        <img src={homes} alt='' />
-                    </div>
-                    <h3>home + hospital 원스톱 비대면 의료 서비스 프로젝트</h3>
-                    <div className='portfolio__item-cta'>
-                        <a href='https://github.com/silbioa480/homespital' className='btn' target='_blank'>Github</a>
-                        <a href='https://drive.google.com/file/d/1XDAMc5WBDE7TvYv4iAjfbyA03EHeAtuV/view?usp=sharing' className='btn btn-primary' target='_blank'>Live Demo</a>
-                    </div>
-                </article>
-
-                <article className='portfolio__items'>
-                    <div className='portfolio__item-image'>
-                        <img src={kairos} alt='' />
-                    </div>
-                    <h3>Online-Personal-Exhibition 온라인 개인 사진전</h3>
-                    <div className='portfolio__item-cta'>
-                        <a href='https://github.com/kisn3089/Online-Personal-Photo-Exhibition' className='btn' target='_blank'>Github</a>
-                        <a href='https://drive.google.com/file/d/19944Pjh-zbgcbg02VY2hw564JOBSRyxp/view?usp=sharing' className='btn btn-primary' target='_blank'>Live Demo</a>
-                    </div>
-                </article>
             </div>
 
 

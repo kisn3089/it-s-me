@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import CV from '../../assets/cv.pdf'
 import gsap from 'gsap'
 
-const Cta = ({timeline}) => {
+const Cta = () => {
     const cv = useRef(null);
     const con = useRef(null);
     useEffect(() => {
@@ -23,7 +23,7 @@ const Cta = ({timeline}) => {
 
     return (
         <div className='cta'>
-            <a href={CV} download className='btn' ref={cv}>Download CV</a>
+            <a href={CV} download className='btn' ref={cv}>CV</a>
             <a href='#contact' className='btn btn-primary' ref={con}>Contact</a>
         </div>
     );

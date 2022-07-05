@@ -44,7 +44,7 @@ const Header = ({timeline}) => {
             {/*<Transition timeline={header}/>*/}
                 <div className="container header__container">
                     <h5 ref={sub}>Hello I'm</h5>
-                    <h1 ref={main}>his</h1>
+                    <h1 ref={main}>Stems</h1>
                     <h5 className='text-light' ref={text}>Frontend Developer</h5>
                     <Cta timeline={timeline} />
                     <HeaderSocials timeline={timeline} />
