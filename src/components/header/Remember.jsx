@@ -55,7 +55,7 @@ const Remember = () => {
         })
         gsap.to([r.current, re.current, rem.current, reme.current, remem.current,
             rememb.current, remembe.current, remember.current], {
-            delay: 2,
+            delay: 1.5,
             duration: 1,
             y: 50,
             opacity: 0,

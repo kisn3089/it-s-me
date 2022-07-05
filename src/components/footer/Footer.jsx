@@ -1,8 +1,5 @@
 import React from 'react';
 import './footer.css';
-import {FaFacebookF} from 'react-icons/fa';
-import {FaInstagram} from 'react-icons/fa';
-import {IoLogoTwitter} from 'react-icons/io';
 
 const Footer = () => {
     return (
@@ -18,12 +15,6 @@ const Footer = () => {
                 {/*<li><a href='#testimonials'>Testimonials</a></li>*/}
                 <li><a href='#contact'>Contact</a></li>
             </ul>
-
-            {/*<div className='footer__socials'>*/}
-            {/*    <a href='#'><FaFacebookF /></a>*/}
-            {/*    <a href='#'><FaInstagram /></a>*/}
-            {/*    <a href='#'><IoLogoTwitter /></a>*/}
-            {/*</div>*/}
 
             <div className='footer__copyright'>
                 <small>&copy; IT'S ME Tutorials. All rights reserved.</small>

@@ -27,6 +27,7 @@ const Contact = () => {
                 trigger: main.current,
                 start: "top bottom",
                 end: "+=40%",
+                // markers: true,
                 scrub: true
             },
             opacity: 0,

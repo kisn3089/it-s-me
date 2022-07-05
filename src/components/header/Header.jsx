@@ -25,15 +25,15 @@ const Header = ({timeline}) => {
             }
         })
         gsap.from(canvas.current, {
-            duration: 1,
+            duration: 2,
             delay: 4,
             x: -1000
         })
         gsap.from(scroll.current, {
-            duration: .7,
+            duration: .5,
             opacity: 0,
-            delay: 5,
-            x: 50
+            delay: 4.5,
+            x: 20
         })
     }, []);
 

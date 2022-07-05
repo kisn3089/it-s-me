@@ -21,14 +21,6 @@ const Box = (props) => {
         cloudsRef.current.rotation.y = elapsedTime / 6
     })
 
-    // useFrame((state) => {
-    //     const step = 0.1;
-    //     state.camera.position = THREE.MathUtils.lerp(
-    //         state.camera.position,
-    //         zoom ?
-    //     )
-    // })
-
     return (
         <>
             <mesh ref={cloudsRef}>

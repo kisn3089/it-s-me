@@ -9,8 +9,8 @@ const HeaderSocials = ({timeline}) => {
     useEffect(() => {
         gsap.from(social.current, {
             duration: .7,
-            delay: 5,
-            x: -50,
+            delay: 4.5,
+            x: -20,
             opacity: 0
         })
     }, [])

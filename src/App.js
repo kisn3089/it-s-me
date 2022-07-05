@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import './App.css';
 import Experience from "./components/experence/Experience";
 import Portfolio from "./components/portfolio/Portfolio";
