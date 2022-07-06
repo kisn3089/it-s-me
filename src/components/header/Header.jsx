@@ -14,27 +14,27 @@ const Header = ({timeline}) => {
     const canvas = useRef(null);
     const scroll = useRef(null);
     useEffect(() => {
-        timeline.from([sub.current,main.current,text.current], .7, {
-            delay: 3,
-            ease: 'Expo.inOut',
-            opacity: 0,
-            y: 100,
-            skewY: 10,
-            stagger: {
-                amount: .3
-            }
-        })
-        gsap.from(canvas.current, {
-            duration: 2,
-            delay: 4,
-            x: -1000
-        })
-        gsap.from(scroll.current, {
-            duration: .5,
-            opacity: 0,
-            delay: 4.5,
-            x: 20
-        })
+        // timeline.from([sub.current,main.current,text.current], .7, {
+        //     delay: 3,
+        //     ease: 'Expo.inOut',
+        //     opacity: 0,
+        //     y: 100,
+        //     skewY: 10,
+        //     stagger: {
+        //         amount: .3
+        //     }
+        // })
+        // gsap.from(canvas.current, {
+        //     duration: 2,
+        //     delay: 4,
+        //     x: -1000
+        // })
+        // gsap.from(scroll.current, {
+        //     duration: .5,
+        //     opacity: 0,
+        //     delay: 4.5,
+        //     x: 20
+        // })
     }, []);
 
     return (
@@ -49,8 +49,9 @@ const Header = ({timeline}) => {
                     <HeaderSocials timeline={timeline} />
 
                     <div className='me'>
-                        <Canvas className='canvas' ref={canvas}>
+                        <Canvas className='canvas' ref={canvas} zoom={[1500, 1500, 1500]}>
                             <OrbitControls
+                                zoom={[1500, 1500, 1500]}
                                 enableZoom={true}
                                 enablePan={true}
                                 enableRotate={true}
@@ -65,7 +66,7 @@ const Header = ({timeline}) => {
                                    factor={7}
                                    saturation={0}
                             />
-                            <Box position={[0, 0, 0]} />
+                            <Box positionZoom={[1500, 1500, 1500]} />
                             <pointLight position={[5, 5, 5]} intensity={5} />
                         </Canvas>
                     </div>

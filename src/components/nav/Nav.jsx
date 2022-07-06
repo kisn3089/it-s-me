@@ -26,11 +26,14 @@ const Nav = () => {
         1100 < window.scrollY && window.scrollY < 1700 ? setExperience('active') : setExperience('#')
         1700 < window.scrollY && window.scrollY < 2300 ? setService('active') : setService('#')
         window.scrollY >= 2300 ? setPortfolio('active') : setPortfolio('#')
+        // DeskTop
         if(4350 < window.scrollY && window.scrollY <= 4750) {
             setScrollTop('bot')
+            // Tablet
         }   else if(5900 < window.scrollY && window.scrollY <= 6000) {
             setScrollTop('bot')
-        }   else if(7800 < window.scrollY && window.scrollY <= 7900) {
+            // Phone
+        }   else if(7800 < window.scrollY && window.scrollY <= 8500) {
             setScrollTop('bot')
         }   else {
             return false;
