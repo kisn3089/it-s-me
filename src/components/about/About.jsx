@@ -39,7 +39,7 @@ const About = () => {
         gsap.from(img.current, {
             scrollTrigger: {
                 trigger: img.current,
-                start: "-=220",
+                start: "-=420",
                 end: "+=270",
                 scrub: true
             },
