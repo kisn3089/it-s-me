@@ -24,8 +24,8 @@ const Nav = () => {
         window.scrollY < 60 ? setScrollTop('nav') : setScrollTop('ac')
         window.scrollY <= 600 ? setHome('active') : setHome('#')
         600 < window.scrollY && window.scrollY < 1400 ? setAbout('active') : setAbout('#')
-        1400 < window.scrollY && window.scrollY < 2000 ? setExperience('active') : setExperience('#')
-        2000 < window.scrollY && window.scrollY < 2600 ? setService('active') : setService('#')
+        1400 < window.scrollY && window.scrollY < 1900 ? setExperience('active') : setExperience('#')
+        1900 < window.scrollY && window.scrollY < 2600 ? setService('active') : setService('#')
         2600 < window.scrollY && window.scrollY < 4300 ? setPortfolio('active') : setPortfolio('#')
         window.scrollY >= 4300 ? setContact('active') : setContact('#')
         // DeskTop
