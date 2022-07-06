@@ -25,8 +25,8 @@ const Header = ({timeline}) => {
             }
         })
         gsap.from(canvas.current, {
-            duration: 2,
-            delay: 4,
+            duration: 1.3,
+            delay: 4.5,
             x: -1000
         })
         gsap.from(scroll.current, {
