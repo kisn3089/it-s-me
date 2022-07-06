@@ -27,19 +27,19 @@
   - Timeline
   - ScrollTrigger
 ### 구현
-Three.js
+#### Three.js
 ```
 - 지구를 만들고 지구 자전속도로 +=x
 - Stars 속성을 통해 별을 생성
 ```
   ![earth](https://user-images.githubusercontent.com/96061695/177530925-7f18d3c9-e3b4-4117-8f98-018e15a4ebc4.png)
 
-PDF
+#### PDF
 ```
 - PDF를 링크로 변환하여 다운로드 없이 볼 수 있게 구현
 ```
   ![pdf](https://user-images.githubusercontent.com/96061695/177530973-f270844b-c704-4944-91e3-f81b6acf64d1.png)
-Portfolio
+#### Portfolio
 ```
 - Data 형식으로 작성한후 map으로 구현
 ```
@@ -70,14 +70,14 @@ Portfolio
           )
       })}
 ```
-Navibar
+#### Navibar
 ```
 - 최상단 스크롤에서 내리기 시작하면 아래에서 올라오게 구현
 - 최상단 스크롤일시 네비바 사라지게 구현
 - 스크롤 위치에 따라 클래스 Active
 - 최하단 스크롤시 네비바가 푸터를 가리지 않게 조금 위로 이동
 ```
-Contact
+#### Contact
 ```
 - Form Submit -> Gmail로 연동되어 알림 구현
 - Naver Send Message -> 로그인시 메일 보내기창에 받을 사람에 내 메일 적힘, 비로그인시 로그인창으로 이동
