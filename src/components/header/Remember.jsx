@@ -72,6 +72,10 @@ const Remember = () => {
             zIndex: -1,
             display: 'none'
         })
+        const timer = setInterval(() => {
+            document.body.style.overflow = 'auto';
+        }, 7000)
+        return () => clearInterval(timer);
     }, [])
 
 
