@@ -4,33 +4,35 @@ import {AiOutlineHome} from 'react-icons/ai';
 import {AiOutlineUser} from 'react-icons/ai';
 import {BiBook} from 'react-icons/bi';
 import {BiMessageSquareDetail} from 'react-icons/bi';
-import {RiServiceLine} from 'react-icons/ri';
+import {BiErrorCircle} from 'react-icons/bi';
+import {BiCarousel} from 'react-icons/bi';
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Nav = () => {
-    const [a, setA] = useState('');
     const [scrollTop, setScrollTop] = useState('nav');
     const [home, setHome] = useState('#');
     const [about, setAbout] = useState('#');
     const [experience, setExperience] = useState('#');
     const [service, setService] = useState('#');
     const [portfolio, setPortfolio] = useState('#');
+    const [contact, setContact] = useState('#');
 
     const downNav = () => {
         window.scrollY < 60 ? setScrollTop('nav') : setScrollTop('ac')
-        window.scrollY <= 400 ? setHome('active') : setHome('#')
-        400 < window.scrollY && window.scrollY < 1100 ? setAbout('active') : setAbout('#')
-        1100 < window.scrollY && window.scrollY < 1700 ? setExperience('active') : setExperience('#')
-        1700 < window.scrollY && window.scrollY < 2300 ? setService('active') : setService('#')
-        window.scrollY >= 2300 ? setPortfolio('active') : setPortfolio('#')
+        window.scrollY <= 600 ? setHome('active') : setHome('#')
+        600 < window.scrollY && window.scrollY < 1400 ? setAbout('active') : setAbout('#')
+        1400 < window.scrollY && window.scrollY < 2000 ? setExperience('active') : setExperience('#')
+        2000 < window.scrollY && window.scrollY < 2600 ? setService('active') : setService('#')
+        2600 < window.scrollY && window.scrollY < 4300 ? setPortfolio('active') : setPortfolio('#')
+        window.scrollY >= 4300 ? setContact('active') : setContact('#')
         // DeskTop
         if(4350 < window.scrollY && window.scrollY <= 4900) {
             setScrollTop('bot')
             // Tablet
-        }   else if(5900 < window.scrollY && window.scrollY <= 6000) {
+        }   else if(6000 < window.scrollY && window.scrollY <= 6100) {
             setScrollTop('bot')
             // Phone
         }   else if(7800 < window.scrollY && window.scrollY <= 8500) {
@@ -73,8 +75,9 @@ const Nav = () => {
             <a href='#' className={home}><AiOutlineHome /></a>
             <a href='#about' className={about}><AiOutlineUser /></a>
             <a href='#experience' className={experience}><BiBook /></a>
-            <a href='#services' className={service}><RiServiceLine /></a>
-            <a href='#contact' className={portfolio}><BiMessageSquareDetail /></a>
+            <a href='#services' className={service}><BiErrorCircle /></a>
+            <a href='#portfolio' className={portfolio}><BiCarousel /></a>
+            <a href='#contact' className={contact}><BiMessageSquareDetail /></a>
         </nav>
     );
 }
