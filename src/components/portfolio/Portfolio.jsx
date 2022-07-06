@@ -7,6 +7,7 @@ import number from '../../assets/number.png';
 import homes from '../../assets/homs.png';
 import daily from '../../assets/daily.png';
 import kairos from '../../assets/kairos.png';
+import its from '../../assets/its.png';
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
@@ -16,10 +17,10 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
         id: 1,
-        image: IMG1,
-        title: 'Crypto Currency Dashboard & Financial Visualization',
-        github: 'https://github.com/kisn3089',
-        demo: 'https://github.com/kisn3089'
+        image: its,
+        title: 'IT.S ME Using Three.js React Portfolio',
+        github: 'https://github.com/kisn3089/it-s-me',
+        demo: 'https://portfolio-hist.vercel.app/'
     },
     {
         id: 2,

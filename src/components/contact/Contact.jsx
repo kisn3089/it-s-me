@@ -96,7 +96,7 @@ const Contact = () => {
         <section id='contact'>
             {/*<h5>Get In Touch</h5>*/}
             <h2 ref={main}>Contact Me</h2>
-            {send && <h2>Success!</h2>}
+            {send && <h3 className='succes'>Success!</h3>}
 
             <div className='container contact__container'>
                 <div className='contact__options'>

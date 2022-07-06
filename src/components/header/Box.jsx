@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {useFrame, useLoader} from '@react-three/fiber'
 
 import EarthDayMap from '../../assets/8k_earth_daymap.jpeg'
@@ -8,7 +8,7 @@ import EarthCloudsMap from '../../assets/8k_earth_clouds.jpg'
 import {TextureLoader} from "three";
 import * as THREE from 'three'
 
-const Box = (props) => {
+const Box = () => {
     const earthRef = useRef();
     const cloudsRef = useRef();
     const [colorMap, normalMap, specularMap, cloudMap] = useLoader(TextureLoader,

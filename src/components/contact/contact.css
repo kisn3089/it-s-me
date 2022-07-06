@@ -1,3 +1,13 @@
+.succes {
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 10px #F9F871,
+    0 0 20px #F9F871;
+    color: #F9F871;
+    font-size: 23px;
+    font-weight: 500;
+}
+
 .container.contact__container {
     width: 58%;
     display: grid;

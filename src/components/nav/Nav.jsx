@@ -27,7 +27,7 @@ const Nav = () => {
         1700 < window.scrollY && window.scrollY < 2300 ? setService('active') : setService('#')
         window.scrollY >= 2300 ? setPortfolio('active') : setPortfolio('#')
         // DeskTop
-        if(4350 < window.scrollY && window.scrollY <= 4750) {
+        if(4350 < window.scrollY && window.scrollY <= 4900) {
             setScrollTop('bot')
             // Tablet
         }   else if(5900 < window.scrollY && window.scrollY <= 6000) {
