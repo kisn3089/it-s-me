@@ -14,27 +14,27 @@ const Header = ({timeline}) => {
     const canvas = useRef(null);
     const scroll = useRef(null);
     useEffect(() => {
-        // timeline.from([sub.current,main.current,text.current], .7, {
-        //     delay: 3,
-        //     ease: 'Expo.inOut',
-        //     opacity: 0,
-        //     y: 100,
-        //     skewY: 10,
-        //     stagger: {
-        //         amount: .3
-        //     }
-        // })
-        // gsap.from(canvas.current, {
-        //     duration: 2,
-        //     delay: 4,
-        //     x: -1000
-        // })
-        // gsap.from(scroll.current, {
-        //     duration: .5,
-        //     opacity: 0,
-        //     delay: 4.5,
-        //     x: 20
-        // })
+        timeline.from([sub.current,main.current,text.current], .7, {
+            delay: 3,
+            ease: 'Expo.inOut',
+            opacity: 0,
+            y: 100,
+            skewY: 10,
+            stagger: {
+                amount: .3
+            }
+        })
+        gsap.from(canvas.current, {
+            duration: 2,
+            delay: 4,
+            x: -1000
+        })
+        gsap.from(scroll.current, {
+            duration: .5,
+            opacity: 0,
+            delay: 4.5,
+            x: 20
+        })
     }, []);
 
     return (
