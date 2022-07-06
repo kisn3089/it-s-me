@@ -75,7 +75,6 @@
   ![contact45](https://user-images.githubusercontent.com/96061695/177531152-e1dbcf57-b796-4697-8fbc-4457222141a6.png)
   - Naver Send Message -> 로그인시 메일 보내기창에 받을 사람에 내 메일 적힘
   ![login2](https://user-images.githubusercontent.com/96061695/177531197-e47bb151-c7d2-41de-980d-dac06e3d06f7.png)
-  
   비로그인시 로그인창으로 이동
   ![login1](https://user-images.githubusercontent.com/96061695/177531236-4b2b216e-3ea6-4ef7-ba1b-532658dd5a83.png)
 ### 개선사항
