@@ -7,7 +7,7 @@
 - 로딩동안 스크롤 lock
 - 모바일(iphone13 pro) 기준 반응형 스크롤이 맨아래일시 네비바가 푸터를 가리지 않게 수정
 ```
-### Deployment Vercel: https://portfolio-p21cqb2ka-kisn3089.vercel.app/
+### Deployment Vercel: https://portfolio-hist.vercel.app/
 
 ### Technology
 - React
