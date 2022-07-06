@@ -40,7 +40,6 @@ const Header = ({timeline}) => {
     return (
         <>
             <header>
-            {/*<Transition timeline={header}/>*/}
                 <div className="container header__container">
                     <h5 ref={sub}>Hello I'm</h5>
                     <h1 ref={main}>Stems</h1>
@@ -49,9 +48,8 @@ const Header = ({timeline}) => {
                     <HeaderSocials timeline={timeline} />
 
                     <div className='me'>
-                        <Canvas className='canvas' ref={canvas} zoom={[1500, 1500, 1500]}>
+                        <Canvas className='canvas' ref={canvas}>
                             <OrbitControls
-                                zoom={[1500, 1500, 1500]}
                                 enableZoom={true}
                                 enablePan={true}
                                 enableRotate={true}
@@ -66,7 +64,7 @@ const Header = ({timeline}) => {
                                    factor={7}
                                    saturation={0}
                             />
-                            <Box positionZoom={[1500, 1500, 1500]} />
+                            <Box />
                             <pointLight position={[5, 5, 5]} intensity={5} />
                         </Canvas>
                     </div>
