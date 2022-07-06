@@ -54,7 +54,7 @@ const data = [
         image: homes,
         title: 'home + hospital 원스톱 비대면 의료 서비스 프로젝트',
         github: 'https://github.com/silbioa480/homespital',
-        demo: 'https://drive.google.com/file/d/1XDAMc5WBDE7TvYv4iAjfbyA03EHeAtuV/view?usp=sharing'
+        demo: 'https://drive.google.com/file/d/10jBlqS6Rj1jkDzrYCcn0xy8inyVuWkaq/view?usp=sharing'
     },
     {
         id: 7,

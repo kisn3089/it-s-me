@@ -35,7 +35,7 @@ const Services = () => {
             scrollTrigger: {
                 trigger: section.current,
                 start: "top bottom",
-                end: "+=100%",
+                end: "+=70%",
                 scrub: true
             },
             opacity: 0,
@@ -76,7 +76,7 @@ const Services = () => {
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>사용자 중심 UI/UX</p>
+                            <p>User Focus UI/UX</p>
                         </li>
                     </ul>
                 </article>

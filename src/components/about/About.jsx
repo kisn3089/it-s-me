@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import './about.css';
 import me2 from '../../assets/me2.jpg';
 import {FaAward} from 'react-icons/fa';
-import {FiUsers} from 'react-icons/fi';
+import {BiBookmarkMinus} from 'react-icons/bi';
 import {VscFolderLibrary} from 'react-icons/vsc';
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -109,15 +109,15 @@ const About = () => {
                 <div className='about__content'>
                     <div className='about__cards' ref={card1}>
                         <article className='about__card'>
-                            <FaAward className='about__icon' />
+                            <BiBookmarkMinus className='about__icon' />
                             <h5>Experience</h5>
-                            <small>1 ~ Years Studying</small>
+                            <small>+8 Month Studying</small>
                         </article>
 
                         <article className='about__card' ref={card2}>
-                            <FiUsers className='about__icon' />
-                            <h5>Clients</h5>
-                            <small>0</small>
+                            <FaAward className='about__icon' />
+                            <h5>Award</h5>
+                            <small>First Prize +1</small>
                         </article>
 
                         <article className='about__card' ref={card3}>
@@ -129,8 +129,8 @@ const About = () => {
 
                     <p ref={text}>
                         사용자에게 입체적이고 인터렉티브한 웹서비스를 제공하기 위해 사용자 중심 인터페이스와 3D 웹뷰를 지향해,
-                        JavaScript 라이브러리인 Three.js를 공부하고 있고 메타버스와 블록체인에도 관심이 많아
-                        Unreal Engine 5와 Solidity 라이브러리를 공부하고 있습니다.
+                        JavaScript 라이브러리인 Three.js를 공부하고 있습니다. 아직은 거리가 있지만 메타버스도 관심이 있어서
+                        Unreal Engine 5를 취미로 조금씩 공부하고 있습니다.
                     </p>
 
                     <a href='#contact' className='btn btn-primary' ref={btn}>Contact</a>

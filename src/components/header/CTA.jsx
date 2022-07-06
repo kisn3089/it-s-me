@@ -1,18 +1,19 @@
 import React, {useRef, useEffect} from 'react';
-import CV from '../../assets/cv.pdf'
 import gsap from 'gsap'
 
 const Cta = () => {
     const cv = useRef(null);
     const con = useRef(null);
     useEffect(() => {
-        gsap.from(cv.current, .5, {
+        gsap.from(cv.current, {
+            duration: 0.5,
             opacity: 0,
             x: -70,
             delay: 3.5,
             ease: 'Power3.inOut'
         })
-        gsap.from(con.current, .5, {
+        gsap.from(con.current, {
+            duration: .5,
             opacity: 0,
             x: 70,
             delay: 3.5,
@@ -23,7 +24,7 @@ const Cta = () => {
 
     return (
         <div className='cta'>
-            <a href={CV} download className='btn' ref={cv}>CV</a>
+            <a href="https://drive.google.com/file/d/1yiES4Id_GjcnBMzq29_n7IyYtM_8m919/view?usp=sharing" target='_blank' className='btn' ref={cv}>CV PDF</a>
             <a href='#contact' className='btn btn-primary' ref={con}>Contact</a>
         </div>
     );
