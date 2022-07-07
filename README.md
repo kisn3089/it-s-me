@@ -27,6 +27,21 @@
   - Timeline
   - ScrollTrigger
 ### 구현
+#### 반응형
+```
+- Mobile(iphone13 pro기준) 반응형
+- Tablet(ipad Air 기준) 반응형
+```
+##### Mobile
+![p1](https://user-images.githubusercontent.com/96061695/177692718-319451f0-29a3-4ac4-9ea8-bddd599be1a8.png)
+![p2](https://user-images.githubusercontent.com/96061695/177692732-e3ead2bd-6688-4b8e-b76c-4fc666bf3bf2.png)
+![p4](https://user-images.githubusercontent.com/96061695/177692741-1908fbf0-33cf-4550-82d8-62f213b10b2b.png)
+##### Tablet
+![pad1](https://user-images.githubusercontent.com/96061695/177692965-9633c064-1cc6-4eb3-98c9-f1de088d830a.png)
+![pad2](https://user-images.githubusercontent.com/96061695/177692970-86e30738-77cb-43de-a0f2-baa310266f0c.png)
+![pad3](https://user-images.githubusercontent.com/96061695/177692978-0c17193a-6081-4915-99ad-df91e7b7e364.png)
+![pad4](https://user-images.githubusercontent.com/96061695/177692982-f3be687b-876f-4d57-aaf2-94da00c6e21b.png)
+
 #### Three.js
 ```
 - 지구를 만들고 지구 자전속도로 +=x
