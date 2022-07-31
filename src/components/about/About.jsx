@@ -129,8 +129,7 @@ const About = () => {
 
                     <p ref={text}>
                         사용자에게 입체적이고 인터렉티브한 웹서비스를 제공하기 위해 사용자 중심 인터페이스와 3D 웹뷰를 지향해,
-                        JavaScript 라이브러리인 Three.js를 공부하고 있고 메타버스와 블록체인에도 관심이 많아
-                        Unreal Engine 5와 Solidity 라이브러리를 공부하고 있습니다.
+                        JavaScript 라이브러리인 Three.js를 공부하고 있고 중점적으로는 React를 공부하고 있습니다.
                     </p>
 
                     <a href='#contact' className='btn btn-primary' ref={btn}>Contact</a>
