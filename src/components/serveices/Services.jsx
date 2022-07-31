@@ -35,7 +35,7 @@ const Services = () => {
             scrollTrigger: {
                 trigger: section.current,
                 start: "top bottom",
-                end: "+=100%",
+                end: "+=70%",
                 scrub: true
             },
             opacity: 0,
@@ -68,7 +68,7 @@ const Services = () => {
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>Gsap</p>
+                            <p>Animation</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
@@ -76,22 +76,43 @@ const Services = () => {
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />
-                            <p>사용자 중심 UI/UX</p>
+                            <p>User Focus UI/UX</p>
                         </li>
                     </ul>
                 </article>
             {/*    END OF UI/UX*/}
                 <article className='service' ref={card2}>
                     <div className='service__head'>
-                        <h3>Web Development,</h3>
-                            <h3>Business Tools</h3>
+                        <h3>Web Development</h3>
                     </div>
 
                     <ul className='service__list'>
                         <li>
                             <BiCheck className='service__list-icon' />
+                            <p>Redux</p>
+                        </li>
+                        <li>
+                            <BiCheck className='service__list-icon' />
                             <p>THREE.js</p>
                         </li>
+                        <li>
+                            <BiCheck className='list-icon' />
+                            <p>Next.js</p>
+                        </li>
+                        <li>
+                            <BiCheck className='list-icon' />
+                            <p>TypeScript</p>
+                        </li>
+                        
+                    </ul>
+                </article>
+                {/*END OF Web Development*/}
+                <article className='service' ref={card3}>
+                    <div className='service__head'>
+                        <h3>Business Tools</h3>
+                    </div>
+
+                    <ul className='service__list'>
                         <li>
                             <BiCheck className='service__list-icon' />
                             <p>Github</p>
@@ -103,27 +124,6 @@ const Services = () => {
                         <li>
                             <BiCheck className='service__list-icon' />
                             <p>Notion</p>
-                        </li>
-                    </ul>
-                </article>
-                {/*END OF Web Development*/}
-                <article className='service' ref={card3}>
-                    <div className='service__head'>
-                        <h3>Content Creation</h3>
-                    </div>
-
-                    <ul className='service__list'>
-                        <li>
-                            <BiCheck className='service__list-icon' />
-                            <p>Unreal Engine 5</p>
-                        </li>
-                        <li>
-                            <BiCheck className='service__list-icon' />
-                            <p>Final Cut Pro</p>
-                        </li>
-                        <li>
-                            <BiCheck className='service__list-icon' />
-                            <p>Drone Filming</p>
                         </li>
                         <li>
                             <BiCheck className='service__list-icon' />

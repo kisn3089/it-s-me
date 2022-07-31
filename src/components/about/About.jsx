@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import './about.css';
 import me2 from '../../assets/me2.jpg';
 import {FaAward} from 'react-icons/fa';
-import {FiUsers} from 'react-icons/fi';
+import {BiBookmarkMinus} from 'react-icons/bi';
 import {VscFolderLibrary} from 'react-icons/vsc';
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -39,7 +39,7 @@ const About = () => {
         gsap.from(img.current, {
             scrollTrigger: {
                 trigger: img.current,
-                start: "-=220",
+                start: "-=420",
                 end: "+=270",
                 scrub: true
             },
@@ -109,15 +109,15 @@ const About = () => {
                 <div className='about__content'>
                     <div className='about__cards' ref={card1}>
                         <article className='about__card'>
-                            <FaAward className='about__icon' />
+                            <BiBookmarkMinus className='about__icon' />
                             <h5>Experience</h5>
-                            <small>1 ~ Years Studying</small>
+                            <small>+8 Month Studying</small>
                         </article>
 
                         <article className='about__card' ref={card2}>
-                            <FiUsers className='about__icon' />
-                            <h5>Clients</h5>
-                            <small>0</small>
+                            <FaAward className='about__icon' />
+                            <h5>Award</h5>
+                            <small>First Prize +1</small>
                         </article>
 
                         <article className='about__card' ref={card3}>

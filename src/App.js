@@ -9,8 +9,8 @@ import Nav from "./components/nav/Nav";
 import About from "./components/about/About";
 import Services from "./components/serveices/Services";
 import Footer from "./components/footer/Footer";
-import gsap from 'gsap'
 import Remember from "./components/header/Remember";
+import gsap from 'gsap'
 
 function App() {
     const timeline = gsap.timeline();

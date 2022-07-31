@@ -1,12 +1,14 @@
 import React, {useRef, useEffect} from 'react';
 import './portfolio.css';
-import IMG1 from '../../assets/portfolio2.jpg';
 import food from '../../assets/31.png';
 import add from '../../assets/add.png';
 import number from '../../assets/number.png';
 import homes from '../../assets/homs.png';
 import daily from '../../assets/daily.png';
 import kairos from '../../assets/kairos.png';
+import its from '../../assets/its.png';
+import router from '../../assets/router.png';
+import redux from '../../assets/redux.png';
 import gsap from 'gsap'
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
@@ -16,48 +18,62 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
         id: 1,
-        image: IMG1,
-        title: 'Crypto Currency Dashboard & Financial Visualization',
-        github: 'https://github.com/kisn3089',
-        demo: 'https://github.com/kisn3089'
+        image: router,
+        title: 'Router and Firebase to add Card and Comments',
+        github: 'https://github.com/kisn3089/router-project',
+        demo: 'https://router-project-indol.vercel.app/quotes'
     },
     {
         id: 2,
+        image: redux,
+        title: 'React-Redux and Redux-toolkit',
+        github: 'https://github.com/kisn3089/react-redux',
+        demo: 'https://react-redux-ashen.vercel.app/'
+    },
+    {
+        id: 3,
+        image: its,
+        title: 'IT.S ME Using Three.js React Portfolio',
+        github: 'https://github.com/kisn3089/it-s-me',
+        demo: 'https://portfolio-hist.vercel.app/'
+    },
+    {
+        id: 4,
         image: food,
         title: 'React, firebase를 활용한 음식 주문 서비스',
         github: 'https://github.com/kisn3089/react-food',
         demo: 'https://react-food-nu.vercel.app/'
     },
     {
-        id: 3,
+        id: 5,
         image: add,
         title: 'React를 활용한 간단한 가계부 서비스',
         github: 'https://github.com/kisn3089/udemy-react',
         demo: 'https://udemy-react-jet.vercel.app/'
     },
     {
-        id: 4,
+        id: 6,
         image: number,
         title: 'JavaScipt를 사용한 숫자 맞추기 게임',
         github: 'https://github.com/kisn3089/number-game',
         demo: 'https://number-game-swart.vercel.app/'
     },
     {
-        id: 5,
+        id: 7,
         image: daily,
         title: 'Daily Cooder 커뮤니티 기반 의류 추천 서비스 프로젝트',
         github: 'https://github.com/silbioa480/Daily-Coorder',
         demo: 'https://daily-coorder.vercel.app/'
     },
     {
-        id: 6,
+        id: 8,
         image: homes,
         title: 'home + hospital 원스톱 비대면 의료 서비스 프로젝트',
         github: 'https://github.com/silbioa480/homespital',
-        demo: 'https://drive.google.com/file/d/1XDAMc5WBDE7TvYv4iAjfbyA03EHeAtuV/view?usp=sharing'
+        demo: 'https://drive.google.com/file/d/10jBlqS6Rj1jkDzrYCcn0xy8inyVuWkaq/view?usp=sharing'
     },
     {
-        id: 7,
+        id: 9,
         image: kairos,
         title: 'Online-Personal-Exhibition 온라인 개인 사진전',
         github: 'https://github.com/kisn3089/Online-Personal-Photo-Exhibition',

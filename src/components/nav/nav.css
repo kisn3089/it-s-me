@@ -32,4 +32,11 @@ nav a.active {
     color: var(--color-white);
 }
 
-
+/*============media queries (SMALL)==================*/
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 0.5rem 1rem;
+        width: min-content;
+        gap: 0.4rem;
+    }
+}

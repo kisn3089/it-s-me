@@ -46,6 +46,11 @@
     margin-top: 2px;
 }
 
+.list-icon {
+    color: rgb(96, 96, 96) ;
+    margin-top: 2px;
+}
+
 .service__list p {
     font-size: 0.9rem;
 }
