@@ -18,14 +18,14 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
         id: 1,
-        image: router,
+        image: redux,
         title: 'Router and Firebase to add Card and Comments',
         github: 'https://github.com/kisn3089/router-project',
         demo: 'https://router-project-indol.vercel.app/quotes'
     },
     {
         id: 2,
-        image: redux,
+        image: router,
         title: 'React-Redux and Redux-toolkit',
         github: 'https://github.com/kisn3089/react-redux',
         demo: 'https://react-redux-ashen.vercel.app/'
@@ -143,7 +143,7 @@ const Portfolio = () => {
                             <h3>{title}</h3>
                             <div className='portfolio__item-cta'>
                                 <a href={github} className='btn' target='_blank'>Github</a>
-                                <a href={demo} className='btn btn-primary' target='_blank'>Live PDF</a>
+                                <a href={demo} className='btn btn-primary' target='_blank'>View Project</a>
                             </div>
                         </article>
                     )

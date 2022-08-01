@@ -1,20 +1,23 @@
 .experience__container {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
+    
 }
 
 .experience__container > div {
-    background: var(--color-bg-variant);
+    background: transparent;
     padding: 2.4rem 5rem;
     border-radius: 2rem;
-    border: 1px solid transparent;
+    /* border: .1px solid #1688f0; */
+    box-shadow: 0 0 10px 1px #1688f0;
 }
 
 .experience__container > div:hover {
+    box-shadow: 0 0 12px 5px #1688f0;
     background: transparent;
-    border-color: var(--color-primary-variant);
+    /* border-color: var(--color-primary-variant); */
     cursor: default;
     transition: var(--transition);
 }

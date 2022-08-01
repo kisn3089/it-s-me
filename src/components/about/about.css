@@ -37,18 +37,20 @@
 }
 
 .about__card {
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
+    background: transparent;
+    /* border: 1px solid #1688f0; */
+    box-shadow: 0 0 10px 1px #1688f0;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
 }
 
 .about__card:hover {
-    background: transparent;
+    /* background: transparent; */
     border-color: var(--color-primary-variant);
     transition: var(--transition);
     cursor: default;
+    box-shadow: 0 0 13px 5px #1688f0;
 }
 
 .about__icon {
