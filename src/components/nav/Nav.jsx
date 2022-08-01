@@ -35,7 +35,7 @@ const Nav = () => {
         }   else if(6000 < window.scrollY && window.scrollY <= 6100) {
             setScrollTop('bot')
             // Phone
-        }   else if(7800 < window.scrollY && window.scrollY <= 8500) {
+        }   else if(7800 < window.scrollY && window.scrollY <= 8600) {
             setScrollTop('bot')
         }   else {
             return false;
