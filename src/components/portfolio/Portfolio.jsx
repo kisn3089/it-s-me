@@ -18,14 +18,14 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
         id: 1,
-        image: redux,
+        image: router,
         title: 'Router and Firebase to add Card and Comments',
         github: 'https://github.com/kisn3089/router-project',
         demo: 'https://router-project-indol.vercel.app/quotes'
     },
     {
         id: 2,
-        image: router,
+        image: redux,
         title: 'React-Redux and Redux-toolkit',
         github: 'https://github.com/kisn3089/react-redux',
         demo: 'https://react-redux-ashen.vercel.app/'
