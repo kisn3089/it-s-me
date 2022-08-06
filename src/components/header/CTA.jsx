@@ -24,7 +24,7 @@ const Cta = () => {
 
     return (
         <div className='cta'>
-            <a href="https://drive.google.com/file/d/1nRoFtgieifEU_ze2unuBsCxZVY13l3Ay/view?usp=sharing" target='_blank' className='ebtn' ref={cv}>CV PDF</a>
+            <a href="https://drive.google.com/file/d/1cLxAGiB5Yx3p3GpyzAMGgwFnkkugJL-X/view?usp=sharing" target='_blank' className='ebtn' ref={cv}>CV PDF</a>
             <a href='#contact' className='ebtn' ref={con}>Contact</a>
         </div>
     );
