@@ -1,150 +1,123 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 import './portfolio.css';
-import number from '../../assets/number.png';
-import homes from '../../assets/homs.png';
-import daily from '../../assets/daily.png';
-import kairos from '../../assets/kairos.png';
-import its from '../../assets/its.png';
-import router from '../../assets/router.png';
-import redux from '../../assets/redux.png';
-import auth from '../../assets/auth.png';
-import gsap from 'gsap'
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const data = [
-    {
-        id: 1,
-        image: auth,
-        title: 'Firebase Authentication Email, Password validatation',
-        github: 'https://github.com/kisn3089/firebase-auth-login',
-        demo: 'https://firebase-auth-login.vercel.app/'
-    },
-    {
-        id: 2,
-        image: router,
-        title: 'Router and Firebase to add Card and Comments',
-        github: 'https://github.com/kisn3089/router-project',
-        demo: 'https://router-project-indol.vercel.app/quotes'
-    },
-    {
-        id: 3,
-        image: redux,
-        title: 'React-Redux and Redux-toolkit',
-        github: 'https://github.com/kisn3089/redux-cart',
-        demo: 'https://redux-cart-xi.vercel.app/'
-    },
-    {
-        id: 4,
-        image: its,
-        title: 'IT.S ME Using Three.js React Portfolio',
-        github: 'https://github.com/kisn3089/it-s-me',
-        demo: 'https://portfolio-hist.vercel.app/'
-    },
-    {
-        id: 5,
-        image: number,
-        title: 'JavaScipt를 사용한 숫자 맞추기 게임',
-        github: 'https://github.com/kisn3089/number-game',
-        demo: 'https://number-game-swart.vercel.app/'
-    },
-    {
-        id: 6,
-        image: daily,
-        title: 'Daily Cooder 커뮤니티 기반 의류 추천 서비스 프로젝트',
-        github: 'https://github.com/silbioa480/Daily-Coorder',
-        demo: 'https://daily-coorder.vercel.app/'
-    },
-    {
-        id: 7,
-        image: homes,
-        title: 'home + hospital 원스톱 비대면 의료 서비스 프로젝트',
-        github: 'https://github.com/silbioa480/homespital',
-        demo: 'https://drive.google.com/file/d/10jBlqS6Rj1jkDzrYCcn0xy8inyVuWkaq/view?usp=sharing'
-    },
-    {
-        id: 8,
-        image: kairos,
-        title: 'Online-Personal-Exhibition 온라인 개인 사진전',
-        github: 'https://github.com/kisn3089/Online-Personal-Photo-Exhibition',
-        demo: 'https://drive.google.com/file/d/19944Pjh-zbgcbg02VY2hw564JOBSRyxp/view?usp=sharing'
-    },
-]
+  {
+    id: 1,
+    image: `${process.env.PUBLIC_URL}/img/gpt.png`,
+    title: 'Chat GPT API를 활용해 만든 검색웹',
+    github: 'https://github.com/kisn3089/Stemps_GPT',
+    demo: 'https://stemps-gpt.vercel.app/',
+  },
+  {
+    id: 2,
+    image: `${process.env.PUBLIC_URL}/img/message.png`,
+    title: '인사말 작성하여 마음을 전달하는 서비스 ( 모바일 전용 )',
+    github: 'https://github.com/kisn3089/send_message',
+    demo: 'https://send-message.vercel.app/create',
+  },
+  {
+    id: 3,
+    image: `${process.env.PUBLIC_URL}/img/marvel.png`,
+    title:
+      '마블 스냅 게임 카드 데이터를 만들어 가상의 덱을 꾸려볼 수 있는 서비스',
+    github: 'https://github.com/kisn3089/marvel',
+    demo: 'https://marvel-vert-nine.vercel.app/card/create',
+  },
+  {
+    id: 4,
+    image: `${process.env.PUBLIC_URL}/img/its.png`,
+    title: 'IT.S ME Using Three.js React Portfolio',
+    github: 'https://github.com/kisn3089/it-s-me',
+    demo: 'https://portfolio-hist.vercel.app/',
+  },
+  {
+    id: 5,
+    image: `${process.env.PUBLIC_URL}/img/number.png`,
+    title: 'JavaScipt를 사용한 숫자 맞추기 게임',
+    github: 'https://github.com/kisn3089/number-game',
+    demo: 'https://number-game-swart.vercel.app/',
+  },
+];
 
 const Portfolio = () => {
-    const sub = useRef(null);
-    const main = useRef(null);
-    const card = useRef([]);
-    card.current = [];
+  const sub = useRef(null);
+  const main = useRef(null);
+  const card = useRef([]);
+  card.current = [];
 
-    const refs = (el) => {
-        if(el && !card.current.includes(el)) {
-         card.current.push(el);
-        }
+  const refs = (el) => {
+    if (el && !card.current.includes(el)) {
+      card.current.push(el);
     }
+  };
 
-    useEffect(() => {
-        gsap.from([sub.current, main.current], {
-            scrollTrigger: {
-                trigger: sub.current,
-                start: "top bottom",
-                end: "+=40%",
-                scrub: true
-            },
-            opacity: 0,
-            y: 50,
-            duration: .5,
-            delay: .3,
-            ease: "Expo.inOut",
-            stagger: {
-                amount: .3
-            }
-        })
-        gsap.from(card.current, {
-            scrollTrigger: {
-                trigger: card.current,
-                start: "top bottom",
-                end: "+=150%",
-                scrub: true
-            },
-            opacity: 0,
-            y: 50,
-            duration: .5,
-            delay: .3,
-            ease: "Expo.inOut",
-            stagger: {
-                amount: .9
-            }
-        })
-    })
+  useEffect(() => {
+    gsap.from([sub.current, main.current], {
+      scrollTrigger: {
+        trigger: sub.current,
+        start: 'top bottom',
+        end: '+=40%',
+        scrub: true,
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      delay: 0.3,
+      ease: 'Expo.inOut',
+      stagger: {
+        amount: 0.3,
+      },
+    });
+    gsap.from(card.current, {
+      scrollTrigger: {
+        trigger: card.current,
+        start: 'top bottom',
+        end: '+=150%',
+        scrub: true,
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      delay: 0.3,
+      ease: 'Expo.inOut',
+      stagger: {
+        amount: 0.9,
+      },
+    });
+  });
 
-    return (
-        <section id='portfolio'>
-            <h5 ref={sub}>My Recent Project</h5>
-            <h2 ref={main}>Portfolio</h2>
+  return (
+    <section id="portfolio">
+      <h5 ref={sub}>My Recent Project</h5>
+      <h2 ref={main}>Portfolio</h2>
 
-            <div className='container portfolio__container'>
-                {data.map(({id, image, title, github, demo}) => {
-                    return (
-                        <article key={id} className='portfolio__items' ref={refs}>
-                            <div className='portfolio__item-image'>
-                                <img src={image} alt={title} />
-                            </div>
-                            <h3>{title}</h3>
-                            <div className='portfolio__item-cta'>
-                                <a href={github} className='btn' target='_blank'>Github</a>
-                                <a href={demo} className='btn btn-primary' target='_blank'>View Project</a>
-                            </div>
-                        </article>
-                    )
-                })}
-            </div>
-
-
-        </section>
-    );
-}
+      <div className="container portfolio__container">
+        {data.map(({ id, image, title, github, demo }) => {
+          return (
+            <article key={id} className="portfolio__items" ref={refs}>
+              <div className="portfolio__item-image">
+                <img src={image} alt={title} />
+              </div>
+              <h3>{title}</h3>
+              <div className="portfolio__item-cta">
+                <a href={github} className="btn" target="_blank">
+                  Github
+                </a>
+                <a href={demo} className="btn btn-primary" target="_blank">
+                  View Project
+                </a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+  );
+};
 
 export default Portfolio;
