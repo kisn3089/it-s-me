@@ -64,7 +64,7 @@ const Experience = () => {
 
       <div className="container experience__container">
         <div className="experience__frontend" ref={card1}>
-          <h3>Skill</h3>
+          <h3>Basic Skill</h3>
           <div className="experience__content">
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
@@ -112,7 +112,7 @@ const Experience = () => {
         </div>
         {/*END OF FRONTEND*/}
         <div className="experience__backend" ref={card2}>
-          <h3>Backend Development</h3>
+          <h3>Skill</h3>
           <div className="experience__content">
             <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
