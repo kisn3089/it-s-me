@@ -112,7 +112,7 @@ const About = () => {
             <article className="about__card">
               <BiBookmarkMinus className="about__icon" />
               <h5>Experience</h5>
-              <small>2022.08 - 스타트업 재직중</small>
+              <small>2022.08 - 헬스케어 플랫폼 스타트업 재직중</small>
             </article>
 
             <article className="about__card" ref={card2}>

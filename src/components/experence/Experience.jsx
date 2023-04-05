@@ -143,9 +143,9 @@ const Experience = () => {
               <div>
                 <h4>Recoil</h4>
                 <small className="text-light">
-                  React Query를 사용하면서 전역 상태로 관리해야할 데이터들이
-                  줄어들었고 React 스케줄링을 지원하는 등 간단하고 빠르게 구현
-                  가능한 Recoil를 주로 사용합니다.
+                  React Query를 사용하면서 전역으로 관리해야할 데이터가
+                  줄어들었고 React 스케줄링을 지원하는 등의 이유로 Recoil를 주로
+                  사용합니다.
                 </small>
               </div>
             </article>
