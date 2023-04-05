@@ -82,7 +82,7 @@ const Experience = () => {
               <div>
                 <h4>HTML</h4>
                 <small className="text-light">
-                  Element 요소들의 속성과 기능을 활용할 수 있습니다.
+                  Canvas 등 Element 요소들의 속성과 기능을 활용할 수 있습니다.
                 </small>
               </div>
             </article>
@@ -144,8 +144,8 @@ const Experience = () => {
                 <h4>Recoil</h4>
                 <small className="text-light">
                   React Query를 사용하면서 전역 상태로 관리해야할 데이터들이
-                  줄어들었으므로 간단하고 빠르게 구현 가능한 Recoil를 주로
-                  사용합니다.
+                  줄어들었고 React 스케줄링을 지원하는 등 간단하고 빠르게 구현
+                  가능한 Recoil를 주로 사용합니다.
                 </small>
               </div>
             </article>

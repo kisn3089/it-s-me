@@ -124,14 +124,15 @@ const About = () => {
             <article className="about__card" ref={card3}>
               <VscFolderLibrary className="about__icon" />
               <h5>Project</h5>
-              <small>3개 이상의 완성된 프로젝트</small>
+              <small>5개 이상의 완성된 프로젝트</small>
             </article>
           </div>
 
           <p ref={text}>
             기술로 일상생활의 불편함을 해결합니다. 사용자에게 입체적이고
             인터렉티브한 경험을 제공하기 위해 최적화와 렌더링, 로딩을 집중적으로
-            보완하고 브라우저 엔진이 좋아짐에 따라 Three.js를 공부하고 있습니다.
+            보완하고 타입스크립트의 타입가드를 통해 안전한 개발 환경을
+            만들어나갑니다.
           </p>
 
           <a href="#contact" className="btn btn-primary" ref={btn}>
