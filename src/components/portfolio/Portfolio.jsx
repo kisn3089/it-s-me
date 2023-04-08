@@ -15,10 +15,10 @@ const data = [
   },
   {
     id: 2,
-    image: `${process.env.PUBLIC_URL}/img/message.png`,
-    title: '인사말 작성하여 마음을 전달하는 서비스 ( 모바일 전용 )',
-    github: 'https://github.com/kisn3089/send_message',
-    demo: 'https://send-message.vercel.app/create',
+    image: `${process.env.PUBLIC_URL}/img/todoInit.png`,
+    title: 'React-Query를 이용한 Todo 웹 서비스',
+    github: 'https://github.com/kisn3089/wanted-todo-react-query',
+    demo: 'https://github.com/kisn3089/wanted-todo-react-query',
   },
   {
     id: 3,
@@ -30,10 +30,10 @@ const data = [
   },
   {
     id: 4,
-    image: `${process.env.PUBLIC_URL}/img/its.png`,
-    title: 'IT.S ME Using Three.js React Portfolio',
-    github: 'https://github.com/kisn3089/it-s-me',
-    demo: 'https://portfolio-hist.vercel.app/',
+    image: `${process.env.PUBLIC_URL}/img/message.png`,
+    title: '인사말 작성하여 마음을 전달하는 서비스 ( 모바일 전용 )',
+    github: 'https://github.com/kisn3089/send_message',
+    demo: 'https://send-message.vercel.app/create',
   },
   {
     id: 5,
